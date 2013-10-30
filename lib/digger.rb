@@ -1,6 +1,7 @@
 require 'bindata'
 
 require 'digger/request_packet'
+require 'digger/basic_stat_request_packet'
 require 'digger/handshake_request_packet'
 
 require 'digger/response_packet'
