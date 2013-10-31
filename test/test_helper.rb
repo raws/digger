@@ -1,4 +1,5 @@
 require 'test/unit'
+require 'mocha/setup'
 
 $:.unshift File.dirname(__FILE__) + '../lib'
 require 'digger'
