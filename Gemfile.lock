@@ -2,9 +2,13 @@ GEM
   remote: https://rubygems.org/
   specs:
     bindata (1.6.0)
+    metaclass (0.0.1)
+    mocha (0.14.0)
+      metaclass (~> 0.0.1)
 
 PLATFORMS
   ruby
 
 DEPENDENCIES
   bindata (= 1.6.0)
+  mocha (= 0.14.0)
