@@ -1,8 +1,7 @@
 module Digger
   class Request
-    def initialize(host, port)
-      @host = host
-      @port = port
+    def initialize(socket)
+      @socket = socket
     end
 
     private
@@ -11,12 +10,8 @@ module Digger
       raise 'subclasses of Digger::Request must implement #bytes_to_read'
     end
 
-    def connect_to_server
-      socket.connect(@host, @port)
-    end
-
     def receive_response
-      @response, _ = socket.recvfrom(bytes_to_read)
+      @response, _ = @socket.recvfrom(bytes_to_read)
     end
 
     def request
@@ -27,18 +22,13 @@ module Digger
       if @response
         @response
       else
-        connect_to_server
         send_request
         receive_response
       end
     end
 
     def send_request
-      socket.send(request, 0)
-    end
-
-    def socket
-      @socket ||= UDPSocket.new
+      @socket.send(request, 0)
     end
   end
 end

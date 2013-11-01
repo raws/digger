@@ -1,7 +1,7 @@
 module Digger
   class BasicStatRequest < Request
-    def initialize(host, port, session_id, token)
-      super host, port
+    def initialize(socket, session_id, token)
+      super socket
       @session_id = session_id
       @token = token
     end

@@ -3,7 +3,8 @@ require 'test_helper'
 module Digger
   class BasicStatRequestTest < TestCase
     test 'a successful request' do
-      request = BasicStatRequest.new('0.0.0.0', 25565, 1, 'token')
+      socket = TestSocket.new
+      request = BasicStatRequest.new(socket, 1, 'token')
       request.stubs(:response).returns(response)
 
       assert_equal 'SMP', request.game_type
