@@ -13,3 +13,4 @@ require 'digger/handshake_response_packet'
 
 require 'digger/request'
 require 'digger/basic_stat_request'
+require 'digger/handshake_request'
