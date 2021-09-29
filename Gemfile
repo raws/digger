@@ -1,6 +1,6 @@
 source 'https://rubygems.org'
 
-gem 'bindata', '1.6.0'
+gem 'bindata', '~> 2.4.10'
 
 group :test do
   gem 'minitest', '~> 5.14.4'
