@@ -3,12 +3,19 @@ GEM
   specs:
     bindata (1.6.0)
     metaclass (0.0.1)
+    minitest (5.14.4)
     mocha (0.14.0)
       metaclass (~> 0.0.1)
+    rake (13.0.6)
 
 PLATFORMS
   ruby
 
 DEPENDENCIES
   bindata (= 1.6.0)
+  minitest (~> 5.14.4)
   mocha (= 0.14.0)
+  rake
+
+BUNDLED WITH
+   2.2.28

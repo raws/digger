@@ -1,4 +1,4 @@
-require 'test/unit'
+require 'minitest/autorun'
 require 'mocha/setup'
 
 $:.unshift File.dirname(__FILE__) + '../lib'

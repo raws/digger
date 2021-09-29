@@ -1,7 +1,7 @@
 module Digger
-  class TestCase < Test::Unit::TestCase
+  class TestCase < Minitest::Test
     def self.test(name, &block)
-      define_method "test #{name.inspect}", &block
+      define_method "test_#{name}", &block
     end
   end
 end
